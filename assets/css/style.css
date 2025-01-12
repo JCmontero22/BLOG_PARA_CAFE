@@ -30,6 +30,7 @@ body{
     --primario: #784D3C;
     --blanco: #ffffff;
     --negro: #000000;
+    --gris: #e1e1e1;
 }
 
 /*************** ESTILOS GENERALES ***************/
@@ -42,6 +43,7 @@ body{
 
 h1,h2,h3,h4{
     font-family: var(--fuenteTirulos);
+    
 }
 
 h1{
@@ -78,6 +80,27 @@ img{
 
 a{
     text-decoration: none;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteTirulos);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton__primario{
+    background-color: var(--negro);
+    margin: 3rem 0;
 }
 
 /*************** HEADER ***************/
@@ -130,7 +153,30 @@ a{
 .contenido-principal{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 4rem;
+    column-gap: 5rem;
+}
+
+/*************** MAIN BLOG ***************/
+.entrada{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: none;
+}
+
+.entrada__img{
+    margin: 2rem 0;
+}
+
+.entrada__contenido h4{
+    margin: 2rem 0;
+}   
+
+.entrada__contenido p{
+    text-align: justify;
 }
 
 
@@ -154,5 +200,9 @@ a{
 
     .header__texto h2{
         font-size: 3rem;
+    }
+
+    .boton__primario{
+        width: 100%;
     }
 }
